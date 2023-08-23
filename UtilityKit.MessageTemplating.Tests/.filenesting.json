@@ -1,0 +1,20 @@
+{
+  "help": "https://go.microsoft.com/fwlink/?linkid=866610",
+  "root": false,
+
+  "dependentFileProviders": {
+    "add": {
+      "pathSegment": {
+        "add": {
+          ".*": [
+            ".txt",
+            ".cs",
+            ".resx",
+            ".tt"
+          ]
+        }
+
+      }
+    }
+  }
+}
