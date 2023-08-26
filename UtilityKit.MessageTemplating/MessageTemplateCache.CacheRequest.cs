@@ -248,9 +248,8 @@ public readonly struct CacheRequest : IEquatable<CacheRequest>
     [DebuggerHidden, DebuggerStepThrough, MethodImpl(MethodImplOptions.AggressiveInlining)]
     public string Message(in IFormatProvider formatProvider, params object[] arguments)
     {
-        if (formatProvider is null) throw new ArgumentNullException(nameof(formatProvider), "The format provider cannot be null.");
-        if (arguments is null) throw new ArgumentNullException(nameof(arguments), "The arguments cannot be null.");
-        // TODO: Localize exception message
+        if (formatProvider is null) throw new ArgumentNullException(nameof(formatProvider), $"The parameter '{nameof(formatProvider)} cannot be null.'");
+        if (arguments is null) throw new ArgumentNullException(nameof(arguments), $"The parameter '{nameof(arguments)} cannot be null.'");
 
         if (MessageTemplateCache.GetCacheItem(this) is not string template)
             return string.Empty;

@@ -12,7 +12,8 @@
 	  <!-- Advanced -->
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <AppDesignerFolder>Resources</AppDesignerFolder>
+	  
+	  <!-- CodeStyle -->
 	  <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 	  <EnableNETAnalyzers>True</EnableNETAnalyzers>
 	  <AnalysisLevel>latest-all</AnalysisLevel>

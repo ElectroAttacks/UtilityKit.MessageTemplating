@@ -101,7 +101,7 @@ public static partial class MessageTemplateCache
 
         if (Interlocked.Exchange(ref _initialized, 1) != 0) return;
 
-        if (callingAssembly is null) throw new ArgumentNullException(nameof(callingAssembly), ""); // TODO: Exception message
+        if (callingAssembly is null) throw new ArgumentNullException(nameof(callingAssembly), $"The parameter '{nameof(callingAssembly)} cannot be null.'");
 
 
         IEnumerable<Task> tasks = callingAssembly.GetTypes()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using UtilityKit.MessageTemplating;
 using UtilityKit.MessageTemplating.Attributes;
@@ -15,11 +16,20 @@ internal class Program
 
         MessageTemplateCache.InitializeAsync(Assembly.GetExecutingAssembly()).GetAwaiter().GetResult();
 
-        //string template = MessageTemplateCache.Get().WithIdentifier("0xEE832E7E").Template();
+        stopwatch.Stop();
+
+        Console.WriteLine($"Initialization took: {stopwatch.ElapsedMilliseconds} ms");
+
+        stopwatch.Restart();
+
+        string template = MessageTemplateCache.Get().WithIdentifier("0xEE832E7E").Template();
 
         stopwatch.Stop();
 
-        //Console.WriteLine(template);
-        Console.WriteLine($"{stopwatch.ElapsedMilliseconds} ms");
+        Console.WriteLine($"Template {template} retrieved within {stopwatch.Elapsed} ms");
+
+        CultureInfo.DefaultThreadCurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
+        MessageTemplateCache.Get().Message(null, "");
     }
 }
