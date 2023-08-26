@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	  <!-- Language and Frameworks -->
-	  <TargetFramework>netstandard2.0</TargetFramework>
+	  <TargetFramework>netstandard2.1</TargetFramework>
 	  <LangVersion>11</LangVersion>
 
 	  <!-- Configuration -->
@@ -11,30 +11,18 @@
 	  
 	  <!-- Advanced -->
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <AppDesignerFolder>Ressources</AppDesignerFolder>
-	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageProjectUrl></PackageProjectUrl>
-	  <Copyright>MIT License</Copyright>
-	  <RepositoryUrl>https://github.com/ElectroAttacks/UtilityKit.MessageTemplating</RepositoryUrl>
-	  <Authors>ElectroAttacks</Authors>
+	  <AppDesignerFolder>Resources</AppDesignerFolder>
+	  <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+	  <EnableNETAnalyzers>True</EnableNETAnalyzers>
+	  <AnalysisLevel>latest-all</AnalysisLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
-    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 </Project>
