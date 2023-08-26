@@ -8,6 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Analyzers\CreateRequestAnalyzer.CodeFixProvider.cs" />
+    <Compile Remove="Analyzers\CreateRequestAnalyzer.cs" />
+    <Compile Remove="Analyzers\MessageTemplateAttributeAnalyzer.CodeFixProvider.cs" />
+    <Compile Remove="Analyzers\MessageTemplateAttributeAnalyzer.cs" />
+    <Compile Remove="Resources\DiagnosticRules.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Analyzers\CreateRequestAnalyzer.CodeFixProvider.cs" />
+    <None Include="Analyzers\CreateRequestAnalyzer.cs" />
+    <None Include="Analyzers\MessageTemplateAttributeAnalyzer.CodeFixProvider.cs" />
+    <None Include="Analyzers\MessageTemplateAttributeAnalyzer.cs" />
+    <None Include="Resources\DiagnosticRules.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\UtilityKit.MessageTemplating\UtilityKit.MessageTemplating.csproj" OutputItemType="Analyzer" />
   </ItemGroup>
 
